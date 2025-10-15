@@ -1,0 +1,57 @@
+# ----------------------------------------------------------------------
+# Dependências e Builds
+# ----------------------------------------------------------------------
+
+# Ignora a pasta de dependências do Node
+node_modules/
+# Arquivos de log do NPM
+npm-debug.log
+.npm/
+
+# Arquivos de lock de pacotes
+package-lock.json
+# Pode ser ignorado se você usa apenas o npm, mas mantenha se usar yarn ou pnpm
+# yarn.lock
+# pnpm-lock.yaml
+
+# Arquivos de cache e builds
+/dist
+/build
+/out
+/temp
+
+# ----------------------------------------------------------------------
+# Variáveis de Ambiente e Arquivos de Configuração
+# ----------------------------------------------------------------------
+
+# Arquivos de variáveis de ambiente que contêm senhas e chaves
+.env
+.env.local
+.env.*.local
+
+# Configurações do seu IDE (Exemplo: VS Code)
+.vscode/
+
+# ----------------------------------------------------------------------
+# Logs, Backups e Temporários
+# ----------------------------------------------------------------------
+
+# Arquivos de log gerados
+*.log
+log/
+tmp/
+
+# Backups ou arquivos temporários de editores
+*~
+#*#
+
+# ----------------------------------------------------------------------
+# Sistema Operacional
+# ----------------------------------------------------------------------
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
