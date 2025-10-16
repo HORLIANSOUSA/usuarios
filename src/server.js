@@ -1,13 +1,24 @@
 import express from "express";
 
 const app = express();
+app.use(express.json());
+
+const usuarios = []; // Corrigido aqui
 
 app.get('/', (req, res) => {
     res.send("Você está na página principal");
 });
 
-app.post('/', (req, res) => {
-    res.send("Você está na página principal usando POST");
+app.get('/usuario', (req, res) => {
+    res.status(200).json(usuarios); // Corrigido aqui
+});
+
+app.post('/usuario', (req, res) => {
+    const { nome, idade } = req.body;
+    console.log(nome, idade);
+    usuarios.push({ nome, idade }); // Corrigido aqui
+    console.log(usuarios);
+    res.status(201).send("Usuário criado");
 });
 
 app.listen(3333, () => {
