@@ -3,20 +3,20 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-const usuarios = []; // Corrigido aqui
+const usuarios = [];
 
 app.get('/', (req, res) => {
     res.send("Você está na página principal");
 });
 
 app.get('/usuario', (req, res) => {
-    res.status(200).json(usuarios); // Corrigido aqui
+    res.status(200).json(usuarios);
 });
 
 app.post('/usuario', (req, res) => {
     const { nome, idade } = req.body;
     console.log(nome, idade);
-    usuarios.push({ nome, idade }); // Corrigido aqui
+    usuarios.push({ nome, idade });
     console.log(usuarios);
     res.status(201).send("Usuário criado");
 });
